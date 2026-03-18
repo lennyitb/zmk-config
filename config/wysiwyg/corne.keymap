@@ -1,0 +1,44 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            display-name = "Base";
+            bindings = <
+&kp TAB     &kp SQT  &kp COMMA  &kp DOT     &kp P  &kp Y             &kp F      &kp G  &kp C      &kp R    &kp L     &kp BSPC
+&kp LCTRL   &kp A  &kp O  &kp E     &kp U  &kp I             &kp D      &kp H  &kp T      &kp N    &kp S  &kp MINUS
+&kp ESCAPE  &kp SEMI  &kp Q  &kp J     &kp K  &kp X             &kp B      &kp M  &kp W  &kp V  &kp Z  &kp ENTER
+                          &kp LGUI  &mo 1  &kp LEFT_SHIFT    &kp SPACE  &mo 2  &kp RALT
+            >;
+        };
+
+        lower_layer {
+            display-name = "Lower";
+            bindings = <
+&kp GRAVE  &kp FSLH  &kp LS(COMMA)   &kp LS(DOT)   &kp LS(FSLH)  &trans           &kp N6          &kp N7        &kp N8        &kp N9        &kp N0             &trans
+&trans     &trans            &kp LS(N9)  &kp LS(N0)  &kp LS(LBKT)         &kp LS(RBKT)    &kp QUESTION  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp EQUAL  &kp PLUS
+&kp LSHFT  &trans            &kp LBKT   &kp RBKT   &trans                &trans           &kp DOT           &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans             &trans
+                                         &trans      &trans                &trans           &trans          &kp N0        &kp ENTER
+            >;
+        };
+
+        raise_layer {
+            display-name = "Raise";
+            bindings = <
+&trans     &trans  &trans  &trans  &trans      &trans    &trans                &kp LA(LEFT_ARROW)  &kp LA(DOWN_ARROW)  &kp LA(UP_ARROW)  &kp LA(RIGHT_ARROW)  &trans
+&trans     &trans  &trans  &trans  &trans      &trans    &kp LS(FSLH)  &kp LEFT_ARROW      &kp DOWN_ARROW      &kp UP_ARROW      &kp RIGHT_ARROW      &trans
+&kp LSHFT  &trans  &trans  &trans  &trans      &trans    &kp FSLH      &kp LA(BACKSPACE)   &kp BACKSPACE       &kp DELETE        &kp LA(DELETE)       &trans
+                           &trans  &kp ESCAPE  &trans    &trans                &trans              &trans
+            >;
+        };
+
+        extra_1 { status = "reserved"; };
+
+        extra_2 { status = "reserved"; };
+
+        extra_3 { status = "reserved"; };
+    };
+};
