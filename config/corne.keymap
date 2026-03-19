@@ -8,20 +8,20 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&kp TAB     &kp Q  &kp W  &kp E     &kp R  &kp T             &kp Y      &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&kp LCTRL   &kp A  &kp S  &kp D     &kp F  &kp G             &kp H      &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp ESCAPE  &kp Z  &kp X  &kp C     &kp V  &kp B             &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ENTER
-                          &kp LGUI  &mo 1  &kp LEFT_SHIFT    &kp SPACE  &mo 2  &kp RALT
+&kp TAB     &kp Q   &kp W  &kp E   &kp R  &kp T             &kp Y      &kp U  &kp I     &kp O  &kp P  &kp BSPC
+&kp LCTRL   &kp A     &kp S      &kp D     &kp F  &kp G             &kp H      &kp J  &kp K     &kp L  &kp SEMI  &kp SQT
+&kp ESCAPE  &kp Z  &kp X      &kp C     &kp V  &kp B             &kp N      &kp M  &kp COMMA     &kp DOT  &kp FSLH  &kp ENTER
+                                 &kp LGUI  &mo 1  &kp LEFT_SHIFT    &kp SPACE  &mo 2  &kp RALT
             >;
         };
 
         lower_layer {
             display-name = "Lower";
             bindings = <
-&kp GRAVE  &kp LEFT_BRACKET  &kp LS(W)   &kp LS(E)   &kp LS(LEFT_BRACKET)  &trans           &kp N6           &kp N7        &kp N8        &kp N9        &kp N0             &kp BACKSLASH
-&trans     &trans            &kp LS(N9)  &kp LS(N0)  &kp LS(MINUS)         &kp LS(EQUAL)    &kp LEFT_BRACE   &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp RIGHT_BRACKET  &kp RIGHT_BRACE
-&kp LSHFT  &trans            &kp MINUS   &kp EQUAL   &trans                &trans           &kp E            &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans             &trans
-                                         &trans      &trans                &trans           &kp RIGHT_SHIFT  &kp N0        &kp ENTER
+&kp GRAVE  &kp LBKT  &kp LS(W)  &kp LS(E)  &kp LS(LBKT)  &trans          &kp N6        &kp N7        &kp N8        &kp N9        &kp BACKSLASH  &trans
+&trans     &trans    &kp LS(N9)     &kp LS(N0)   &kp LS(MINUS)  &kp LS(EQUAL)    &kp LEFT_BRACE  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp RBKT      &kp RIGHT_BRACE
+&kp LSHFT  &trans    &kp MINUS       &kp EQUAL     &trans        &trans          &kp E       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans         &kp RIGHT_SHIFT
+                                    &trans       &trans        &trans          &trans        &kp N0        &kp ENTER
             >;
         };
 
