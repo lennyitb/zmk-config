@@ -28,10 +28,10 @@
         raise_layer {
             display-name = "Raise";
             bindings = <
-&trans     &trans  &trans  &trans  &trans      &trans    &trans        &kp LA(LEFT_ARROW)  &kp LA(DOWN_ARROW)  &kp LA(UP_ARROW)  &kp LA(RIGHT_ARROW)  &trans
-&trans     &trans  &trans  &trans  &trans      &trans    &kp LBKT      &kp LEFT_ARROW      &kp DOWN_ARROW      &kp UP_ARROW      &kp RIGHT_ARROW      &trans
-&kp LSHFT  &trans  &trans  &trans  &trans      &trans    &kp LS(LBKT)  &kp LA(BACKSPACE)   &kp BACKSPACE       &kp DELETE        &kp LA(DELETE)       &trans
-                           &trans  &kp ESCAPE  &trans    &trans        &trans              &trans
+&trans     &trans  &trans  &trans  &trans      &trans    &trans              &kp LA(LEFT_ARROW)  &kp LA(DOWN_ARROW)  &kp LA(UP_ARROW)  &kp LA(RIGHT_ARROW)  &trans
+&trans     &trans  &trans  &trans  &trans      &trans    &kp LG(LEFT_ARROW)  &kp LEFT_ARROW      &kp DOWN_ARROW      &kp UP_ARROW      &kp RIGHT_ARROW      &kp LG(RIGHT_ARROW)
+&kp LSHFT  &trans  &trans  &trans  &trans      &trans    &kp LG(BACKSPACE)   &kp LA(BACKSPACE)   &kp BACKSPACE       &kp DELETE        &kp LA(DELETE)       &kp LG(DELETE)
+                           &trans  &kp ESCAPE  &trans    &trans              &trans              &trans
             >;
         };
 
