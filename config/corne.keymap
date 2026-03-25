@@ -18,10 +18,10 @@
         lower_layer {
             display-name = "Lower";
             bindings = <
-&kp GRAVE  &kp LBKT  &kp LS(W)  &kp LS(E)  &kp LS(LBKT)  &trans          &kp N6        &kp N7        &kp N8        &kp N9        &kp BACKSLASH  &trans
-&trans     &trans    &kp LS(N9)     &kp LS(N0)   &kp LS(MINUS)  &kp LS(EQUAL)    &kp LEFT_BRACE  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp RBKT      &kp RIGHT_BRACE
-&kp LSHFT  &trans    &kp MINUS       &kp EQUAL     &trans        &trans          &kp E       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans         &kp RIGHT_SHIFT
-                                    &trans       &trans        &trans          &trans        &kp N0        &kp ENTER
+&kp GRAVE  &kp LBKT       &kp LS(W)  &kp LS(E)  &kp LS(LBKT)  &trans          &kp ASTERISK  &kp N7        &kp N8        &kp N9        &kp BACKSLASH  &trans
+&trans     &kp LS(LBKT)  &kp LS(N9)     &kp LS(N0)   &kp LS(MINUS)  &kp LS(EQUAL)    &kp LBKT     &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp RBKT      &kp SQT
+&kp LSHFT  &trans         &kp MINUS       &kp EQUAL     &trans        &trans          &kp E       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp RIGHT_BRACE       &kp RIGHT_SHIFT
+                                         &trans       &trans        &trans          &trans        &kp N0        &kp ENTER
             >;
         };
 
@@ -29,8 +29,8 @@
             display-name = "Raise";
             bindings = <
 &trans     &trans  &trans  &trans  &trans      &trans    &trans        &kp LA(LEFT_ARROW)  &kp LA(DOWN_ARROW)  &kp LA(UP_ARROW)  &kp LA(RIGHT_ARROW)  &trans
-&trans     &trans  &trans  &trans  &trans      &trans    &kp LS(LBKT)  &kp LEFT_ARROW      &kp DOWN_ARROW      &kp UP_ARROW      &kp RIGHT_ARROW      &trans
-&kp LSHFT  &trans  &trans  &trans  &trans      &trans    &kp LBKT      &kp LA(BACKSPACE)   &kp BACKSPACE       &kp DELETE        &kp LA(DELETE)       &trans
+&trans     &trans  &trans  &trans  &trans      &trans    &kp LBKT      &kp LEFT_ARROW      &kp DOWN_ARROW      &kp UP_ARROW      &kp RIGHT_ARROW      &trans
+&kp LSHFT  &trans  &trans  &trans  &trans      &trans    &kp LS(LBKT)  &kp LA(BACKSPACE)   &kp BACKSPACE       &kp DELETE        &kp LA(DELETE)       &trans
                            &trans  &kp ESCAPE  &trans    &trans        &trans              &trans
             >;
         };
