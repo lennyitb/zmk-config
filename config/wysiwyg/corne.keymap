@@ -10,8 +10,8 @@
             bindings = <
 &kp TAB     &kp SQT   &kp COMMA  &kp DOT   &kp P  &kp Y             &kp F      &kp G  &kp C     &kp R  &kp L  &kp BSPC
 &kp LCTRL   &kp A     &kp O      &kp E     &kp U  &kp I             &kp D      &kp H  &kp T     &kp N  &kp S  &kp MINUS
-&kp ESCAPE  &kp SEMI  &kp Q      &kp J     &kp K  &kp X             &kp B      &kp M  &kp W     &kp V  &kp Z  &kp ENTER
-                                 &kp LGUI  &mo 1  &kp LEFT_SHIFT    &kp SPACE  &mo 2  &kp RALT
+&kp ESCAPE  &kp SEMI  &kp Q      &kp J     &kp K  &kp X             &kp B      &kp M  &kp W     &kp V  &kp Z  &kp SLASH
+                                 &kp LGUI  &mo 1  &sk LEFT_SHIFT    &kp SPACE  &mo 2  &kp RALT
             >;
         };
 
@@ -28,7 +28,7 @@
         raise_layer {
             display-name = "Raise";
             bindings = <
-&trans     &trans  &trans  &trans  &trans      &trans    &trans              &kp LA(LEFT_ARROW)  &kp LA(DOWN_ARROW)  &kp LA(UP_ARROW)  &kp LA(RIGHT_ARROW)  &trans
+&trans     &trans  &trans  &trans  &trans      &trans    &kp LA(UP_ARROW)    &kp LA(LEFT_ARROW)  &kp LG(DOWN_ARROW)  &kp LG(UP_ARROW)  &kp LA(RIGHT_ARROW)  &kp LA(DOWN)
 &trans     &trans  &trans  &trans  &trans      &trans    &kp LG(LEFT_ARROW)  &kp LEFT_ARROW      &kp DOWN_ARROW      &kp UP_ARROW      &kp RIGHT_ARROW      &kp LG(RIGHT_ARROW)
 &kp LSHFT  &trans  &trans  &trans  &trans      &trans    &kp LG(BACKSPACE)   &kp LA(BACKSPACE)   &kp BACKSPACE       &kp DELETE        &kp LA(DELETE)       &kp LG(DELETE)
                            &trans  &kp ESCAPE  &trans    &trans              &trans              &trans
