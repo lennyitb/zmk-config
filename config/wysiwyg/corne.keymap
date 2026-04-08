@@ -2,6 +2,16 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    behaviors {
+        sk_shift: sticky_shift {
+            compatible = "zmk,behavior-sticky-key";
+            #binding-cells = <1>;
+            bindings = <&kp>;
+            release-after-ms = <1000>;
+            quick-release;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -11,7 +21,7 @@
 &kp TAB     &kp SQT   &kp COMMA  &kp DOT   &kp P  &kp Y             &kp F      &kp G  &kp C     &kp R  &kp L  &kp BSPC
 &kp LCTRL   &kp A     &kp O      &kp E     &kp U  &kp I             &kp D      &kp H  &kp T     &kp N  &kp S  &kp MINUS
 &kp ESCAPE  &kp SEMI  &kp Q      &kp J     &kp K  &kp X             &kp B      &kp M  &kp W     &kp V  &kp Z  &kp SLASH
-                                 &kp LGUI  &mo 1  &sk LEFT_SHIFT    &kp SPACE  &mo 2  &kp RALT
+                                 &kp LGUI  &mo 1  &sk_shift LEFT_SHIFT    &kp SPACE  &mo 2  &kp RALT
             >;
         };
 
