@@ -15,6 +15,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp ESCAPE>, <&none>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
@@ -25,9 +26,9 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&kp TAB     &kp SQT   &kp COMMA  &kp DOT   &kp P  &kp Y             &kp F      &kp G  &kp C     &kp R  &kp L  &kp BSPC
-&kp LCTRL   &kp A     &kp O      &kp E     &kp U  &kp I             &kp D      &kp H  &kp T     &kp N  &kp S  &kp MINUS
-&esc_morph  &kp SEMI  &kp Q      &kp J     &kp K  &kp X             &kp B      &kp M  &kp W     &kp V  &kp Z  &kp SLASH
+&kp TAB     &kp SQT   &kp COMMA  &kp DOT   &kp P  &kp Y                   &kp F      &kp G  &kp C     &kp R  &kp L  &kp BSPC
+&kp LCTRL   &kp A     &kp O      &kp E     &kp U  &kp I                   &kp D      &kp H  &kp T     &kp N  &kp S  &kp MINUS
+&esc_morph  &kp SEMI  &kp Q      &kp J     &kp K  &kp X                   &kp B      &kp M  &kp W     &kp V  &kp Z  &kp SLASH
                                  &kp LGUI  &mo 1  &sk_shift LEFT_SHIFT    &kp SPACE  &mo 2  &kp RALT
             >;
         };
@@ -35,10 +36,10 @@
         lower_layer {
             display-name = "Lower";
             bindings = <
-&kp GRAVE  &kp FSLH       &kp LS(COMMA)  &kp LS(DOT)  &kp LS(FSLH)  &trans          &kp ASTERISK  &kp N7        &kp N8        &kp N9        &kp BACKSLASH  &trans
-&trans     &kp LS(SLASH)  &kp LS(N9)     &kp LS(N0)   &kp LS(LBKT)  &kp LS(RBKT)    &kp SLASH     &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp EQUAL      &kp MINUS
-&kp LSHFT  &trans         &kp LBKT       &kp RBKT     &trans        &trans          &kp DOT       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PLUS       &kp RIGHT_SHIFT
-                                         &trans       &trans        &trans          &trans        &kp N0        &kp ENTER
+&kp GRAVE  &kp FSLH         &kp LS(COMMA)  &kp LS(DOT)  &kp LS(FSLH)     &trans          &kp ASTERISK  &kp N7        &kp N8        &kp N9        &kp BACKSLASH  &trans
+&trans     &kp LS(SLASH)    &kp LS(N9)     &kp LS(N0)   &kp LS(LBKT)     &kp LS(RBKT)    &kp SLASH     &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp EQUAL      &kp MINUS
+&kp LSHFT  &kp EXCLAMATION  &kp LBKT       &kp RBKT     &kp EXCLAMATION  &trans          &kp DOT       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PLUS       &kp RIGHT_SHIFT
+                                           &trans       &trans           &trans          &trans        &kp N0        &kp ENTER
             >;
         };
 
@@ -47,7 +48,7 @@
             bindings = <
 &trans     &trans  &trans  &trans  &trans      &trans    &kp LA(UP_ARROW)    &kp LA(LEFT_ARROW)  &kp LG(DOWN_ARROW)  &kp LG(UP_ARROW)  &kp LA(RIGHT_ARROW)  &kp LA(DOWN)
 &trans     &trans  &trans  &trans  &trans      &trans    &kp LG(LEFT_ARROW)  &kp LEFT_ARROW      &kp DOWN_ARROW      &kp UP_ARROW      &kp RIGHT_ARROW      &kp LG(RIGHT_ARROW)
-&kp LSHFT  &trans  &trans  &trans  &trans      &trans    &kp LG(BACKSPACE)   &kp LA(BACKSPACE)   &kp BACKSPACE       &kp DELETE        &kp LA(DELETE)       &kp LG(DELETE)
+&kp LSHFT  &trans  &trans  &trans  &trans      &trans    &kp LG(BACKSPACE)   &kp LA(BACKSPACE)   &kp BACKSPACE       &kp DELETE        &kp LA(DELETE)       &kp RIGHT_SHIFT
                            &trans  &kp ESCAPE  &trans    &trans              &trans              &trans
             >;
         };
