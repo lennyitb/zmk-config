@@ -20,6 +20,14 @@
         };
     };
 
+    macros {
+        del_to_eol: delete_to_end_of_line {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LG(RIGHT))>, <&kp DELETE>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -48,7 +56,7 @@
             bindings = <
 &trans     &trans  &trans  &trans  &trans      &trans    &kp LA(UP_ARROW)    &kp LA(LEFT_ARROW)  &kp LG(DOWN_ARROW)  &kp LG(UP_ARROW)  &kp LA(RIGHT_ARROW)  &kp LA(DOWN)
 &trans     &trans  &trans  &trans  &trans      &trans    &kp LG(LEFT_ARROW)  &kp LEFT_ARROW      &kp DOWN_ARROW      &kp UP_ARROW      &kp RIGHT_ARROW      &kp LG(RIGHT_ARROW)
-&kp LSHFT  &trans  &trans  &trans  &trans      &trans    &kp LG(BACKSPACE)   &kp LA(BACKSPACE)   &kp BACKSPACE       &kp DELETE        &kp LA(DELETE)       &kp RIGHT_SHIFT
+&kp LSHFT  &trans  &trans  &trans  &trans      &trans    &kp LG(BACKSPACE)   &kp LA(BACKSPACE)   &kp BACKSPACE       &kp DELETE        &kp LA(DELETE)       &del_to_eol
                            &trans  &kp ESCAPE  &trans    &trans              &trans              &trans
             >;
         };

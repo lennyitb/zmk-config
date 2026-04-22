@@ -15,7 +15,16 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp ESCAPE>, <&none>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+    };
+
+    macros {
+        del_to_eol: delete_to_end_of_line {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LG(RIGHT))>, <&kp DELETE>;
         };
     };
 
@@ -25,9 +34,9 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&kp TAB     &kp Q   &kp W  &kp E   &kp R  &kp T             &kp Y      &kp U  &kp I     &kp O  &kp P  &kp BSPC
-&kp LCTRL   &kp A     &kp S      &kp D     &kp F  &kp G             &kp H      &kp J  &kp K     &kp L  &kp SEMI  &kp SQT
-&esc_morph  &kp Z  &kp X      &kp C     &kp V  &kp B             &kp N      &kp M  &kp COMMA     &kp DOT  &kp FSLH  &kp LBKT
+&kp TAB     &kp Q   &kp W  &kp E   &kp R  &kp T                   &kp Y      &kp U  &kp I     &kp O  &kp P  &kp BSPC
+&kp LCTRL   &kp A     &kp S      &kp D     &kp F  &kp G                   &kp H      &kp J  &kp K     &kp L  &kp SEMI  &kp SQT
+&esc_morph  &kp Z  &kp X      &kp C     &kp V  &kp B                   &kp N      &kp M  &kp COMMA     &kp DOT  &kp FSLH  &kp LBKT
                                  &kp LGUI  &mo 1  &sk_shift LEFT_SHIFT    &kp SPACE  &mo 2  &kp RALT
             >;
         };
@@ -35,10 +44,10 @@
         lower_layer {
             display-name = "Lower";
             bindings = <
-&kp GRAVE  &kp LBKT       &kp LS(W)  &kp LS(E)  &kp LS(LBKT)  &trans          &kp ASTERISK  &kp N7        &kp N8        &kp N9        &kp BACKSLASH  &trans
-&trans     &kp LS(LBKT)  &kp LS(N9)     &kp LS(N0)   &kp LS(MINUS)  &kp LS(EQUAL)    &kp LBKT     &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp RBKT      &kp SQT
-&kp LSHFT  &trans         &kp MINUS       &kp EQUAL     &trans        &trans          &kp E       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp RIGHT_BRACE       &kp RIGHT_SHIFT
-                                         &trans       &trans        &trans          &trans        &kp N0        &kp ENTER
+&kp GRAVE  &kp LBKT         &kp LS(W)  &kp LS(E)  &kp LS(LBKT)     &trans          &kp ASTERISK  &kp N7        &kp N8        &kp N9        &kp BACKSLASH  &trans
+&trans     &kp LS(LBKT)    &kp LS(N9)     &kp LS(N0)   &kp LS(MINUS)     &kp LS(EQUAL)    &kp LBKT     &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp RBKT      &kp SQT
+&kp LSHFT  &kp EXCLAMATION  &kp MINUS       &kp EQUAL     &kp EXCLAMATION  &trans          &kp E       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp RIGHT_BRACE       &kp RIGHT_SHIFT
+                                           &trans       &trans           &trans          &trans        &kp N0        &kp ENTER
             >;
         };
 
@@ -47,7 +56,7 @@
             bindings = <
 &trans     &trans  &trans  &trans  &trans      &trans    &kp LA(UP_ARROW)    &kp LA(LEFT_ARROW)  &kp LG(DOWN_ARROW)  &kp LG(UP_ARROW)  &kp LA(RIGHT_ARROW)  &kp LA(DOWN)
 &trans     &trans  &trans  &trans  &trans      &trans    &kp LG(LEFT_ARROW)  &kp LEFT_ARROW      &kp DOWN_ARROW      &kp UP_ARROW      &kp RIGHT_ARROW      &kp LG(RIGHT_ARROW)
-&kp LSHFT  &trans  &trans  &trans  &trans      &trans    &kp LG(BACKSPACE)   &kp LA(BACKSPACE)   &kp BACKSPACE       &kp DELETE        &kp LA(DELETE)       &kp LG(DELETE)
+&kp LSHFT  &trans  &trans  &trans  &trans      &trans    &kp LG(BACKSPACE)   &kp LA(BACKSPACE)   &kp BACKSPACE       &kp DELETE        &kp LA(DELETE)       &del_to_eol
                            &trans  &kp ESCAPE  &trans    &trans              &trans              &trans
             >;
         };
